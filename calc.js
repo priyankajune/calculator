@@ -1,39 +1,40 @@
 var user=prompt("Please Enter Your Name");
 alert("Hii "+user+"\nLet us start!!");
-var num1=prompt("Please insert any number to calculate")
-var num2=prompt("Please insert any number to calculate with");
-while(operation!=0)
+while(operation!="q")
 {
-var operation=prompt("Please select your operation number below\n1.Addition\n2.Substraction\n3.Multiplication\n4.Division\n0.Exit");
+var num1=prompt("Please insert any number to calculate")
+//Putting operation in between numbers is more convenient and interactive
+var operation=prompt("Please select your operation below\n1.Addition => +\n2.Substraction => - \n3.Multiplication => * \n4.Division => /\n0.Exit => q");
 
-if(operation=="1")
+var num2=prompt("Please insert any number to calculate with");
+
+if(operation=="+")//addition
 {
 alert("The result is "+(+num1 + +num2));
 }
 else
-if(operation=="2")
+if(operation=="-")//subtraction
 {
 alert("The result is "+(num1-num2));
 }
 else
-if(operation=="3")
+if(operation=="*")//multiplication
 {
 alert("The result is "+(num1*num2));
 }
 else
-if(operation=="4")
+if(operation=="/")//division
 {
 alert("The result is "+(num1/num2));
 }
 else
 {
-if(operation=="0")
+if(operation=="q")//quit
 {
 alert("Thanks for using CalcPD+ ");
 }
-else
+else//invalid input in operation
 {
 alert("Please insert valid number");}
 }
-
 }
